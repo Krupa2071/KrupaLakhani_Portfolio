@@ -7,22 +7,24 @@ body {
     background-position: center;
     background-repeat: no-repeat; 
 }
+/* Navigation Bar */
 nav {
     background-color: #333;
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 1;
+    text-align: center; 
 }
+
 .navbar {
     list-style-type: none;
-    padding: 10px 0; 
+    padding: 10px 0;
     margin: 0;
-    display: flex;
-    justify-content: center;
 }
 
 .navbar li {
+    display: inline-block; 
     margin: 0 20px;
 }
 
@@ -37,119 +39,129 @@ nav {
 .navbar a:hover {
     color: darkturquoise;
 }
-/*about me section*/
+
+/* About Me Section */
 .aboutme {
-    padding: 60px; 
+    padding: 60px;
     padding-bottom: 205px;
-    /* background-color: blue; */
     background-image: url(pic/bg4.jpg);
+    background-size: cover; 
+    background-position: center;
     text-align: center;
-    margin-bottom: 10px; 
-    overflow: hidden; 
+    margin-bottom: 10px;
+    overflow: hidden;
+    position: relative; 
 }
 
 .aboutme-content {
     padding-top: 150px;
-    padding-right: 230px;
-    display: flex;
-    align-items: center;
-    justify-content: center; 
+    display: inline-block; 
+    vertical-align: top; 
     animation: slideInRight 1s ease-out;
 }
 
 .aboutme img {
-    height: 350px;
-    width: auto; 
+    max-height: 350px; 
+    width: auto;
     border-radius: 10%;
     object-fit: cover;
-    box-shadow: 0 0 10px rgba(1, 1, 5, 0.322); 
+    box-shadow: 0 0 10px rgba(1, 1, 5, 0.322);
     margin: 20px;
-    transition: transform 0.3s ease, rotate 0.3s ease; 
+    transition: transform 0.3s ease, rotate 0.3s ease;
 }
 
 @keyframes slideInRight {
     from {
-        transform: translateX(-100%); 
+        transform: translateX(-100%);
     }
     to {
-        transform: translateX(0); 
+        transform: translateX(0);
     }
 }
 
 .aboutme img:hover {
-    transform: scale(1.12); 
+    transform: scale(1.12);
 }
 
 .text-content {
-    width: 60%; 
-    text-align: left; 
+    margin-right: 200;
+    padding: 80;
+    width: 60%;
+    text-align: left;
+    display: inline-block; 
+    vertical-align: top; 
 }
 
 .aboutme h1 {
-    font-size: 32px; 
-    margin: 10px 0; 
+    font-size: 40px;
+    margin: 25px 10;
     color: white;
     font-family: 'Saira', sans-serif;
 }
-.aboutme h1 span{
-    color:white;
+
+.aboutme h1 span {
+    color: white;
     font-family: 'Dela Gothic One', cursive;
-    font-size: 50px;
+    font-size: 40px;
 }
+
 .aboutme h4 {
     font-size: 24px;
-    color: darkturquoise; 
+    color: darkturquoise;
     margin: 5px 0;
     font-family: 'Saira', sans-serif;
     font-weight: 800;
 }
 
 .aboutme-content p {
+    margin-right: 235px;
     font-size: 18px;
     color: white;
     line-height: 1.5;
     font-family: 'Saira', sans-serif;
 }
 
-
-
 /* Education */
 .education {
-    padding: 30px; 
+    padding: 30px;
     background-color: #f0f0f0;
     text-align: center;
 }
 
 .education h2 {
-    font-size: 28px; 
+    font-size: 28px;
     margin-bottom: 10px;
-    color: navy; 
+    color: navy;
 }
 
 .education-item-container {
-    display: flex;
-    flex-wrap: wrap; 
-    justify-content: center; 
+    text-align: center;
+    overflow: hidden;
 }
 
 .education-item {
     width: calc(50% - 20px); 
-    border: 1px solid #ccc; 
-    padding: 20px; 
+    height:50px;
+    border: 1px solid #ccc;
+    padding: 10px;
     margin: 10px; 
     text-align: left;
-    box-sizing: border-box; 
+    box-sizing: border-box;
+    float: left; 
+    clear: none; 
+    min-height: 200px; 
 }
 
 .education-item h3 {
-    font-size: 20px; 
-    margin-bottom: 10px; 
+    font-size: 20px;
+    margin-bottom: 10px;
 }
 
 .education-item p {
-    font-size: 16px; 
+    font-size: 16px;
     margin: 5px 0;
 }
+
 /*Projects*/
 .projects {
     background-color: #f0f0f0;
@@ -165,11 +177,15 @@ nav {
 
 .project {
     text-align: left;
-    margin: 20px 0;
+    margin: 5px 10px; 
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    display: inline-block;
+    width: calc(90% - 20px); 
+    vertical-align: top; 
+    box-sizing: border-box;
 }
 
 .project h3 {
@@ -180,12 +196,14 @@ nav {
 .project ul {
     font-size: 16px; 
     line-height: 1.5;
-    list-style-type:disc; 
+    list-style-type: disc; 
+    padding-left: 20px; 
 }
 
 .project ul li {
     margin-bottom: 10px; 
 }
+
 /*experience*/
 .experience {
     background-color: #f0f0f0;
@@ -196,29 +214,27 @@ nav {
 .experience h2 {
     font-size: 28px;
     margin-bottom: 20px;
-    color: navy; 
+    color: navy;
 }
 
 .experience-item {
     text-align: left;
-    margin: 20px 0;
+    height: 380px;
+    margin: 20px 10px; 
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-    font-size: 16px; 
-}
-
-.experience-header {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-end;
+    font-size: 16px;
+    display: inline-block; 
+    width: 48%; 
+    vertical-align: top; 
+    box-sizing: border-box;
 }
 
 .experience-item h3 {
     font-size: 24px;
     margin-bottom: 10px;
-    width:50%;
 }
 
 .experience-item p {
@@ -227,7 +243,7 @@ nav {
 }
 
 .experience-item ul {
-    font-size: 16px; 
+    font-size: 16px;
     line-height: 1.5;
     list-style-type: disc;
 }
@@ -240,10 +256,11 @@ nav {
     color: #007bff;
     text-decoration: underline;
 }
+
 /*Skills*/
 .skills {
     background-color: #f0f0f0;
-    padding: 10px;
+    padding:10px;
     text-align: center;
 }
 
@@ -254,24 +271,26 @@ nav {
 }
 
 .skills-list {
-    display: flex; 
-    flex-wrap: wrap; /* Allow items to wrap to the next line if needed */
-    justify-content: center; 
-    list-style: none; 
+    width: 100%;
+    list-style: none;
+    margin:10px;
     padding: 0;
 }
 
 .skills-list li {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width:20%;
-    background-color:darkturquoise;
+    margin: 10px 0;
+    margin-right: 20px;
+    width: 20%; 
+    box-sizing: border-box;
+    padding: 10px; 
+    background-color: darkturquoise;
     color: white;
     border-radius: 20px;
-    padding: 8px;
-    margin: 5px;
     font-size: 16px;
+    display: inline-block; 
+}
+.skills-list li span{
+    margin-left: 10px;
 }
 
 .aboutme,
@@ -283,7 +302,6 @@ nav {
     margin-top: 60px;
     padding-top: 30px; 
 }
-
 .footer {
     background-color: #222;
     color: white;
@@ -294,31 +312,29 @@ nav {
 }
 
 .footer-content {
-    display: flex;
-    justify-content: center;
+    text-align: center;
 }
 
-.footer-links {
-    display: flex;
-    align-items: center;
-}
-
-.footer a {
+.footer-content a, .footer-content p {
+    display: inline-block;
+    margin: 0 20px;
     text-decoration: none;
     color: white;
     font-weight: bold;
     font-size: 18px;
-    margin: 10px 20px;
-    display: flex; 
-    align-items: center; 
+    vertical-align: middle;
     transition: color 0.3s ease;
 }
 
-.footer a i {
-    margin-right: 8px; 
-    font-size: 24px; 
+.footer-content a i {
+    margin-right: 8px;
+    font-size: 24px;
 }
 
-.footer a:hover {
+.footer-content p {
+    margin: 0;
+}
+
+.footer-content a:hover {
     color: #00bcd4;
 }
